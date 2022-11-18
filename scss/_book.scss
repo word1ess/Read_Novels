@@ -1,0 +1,218 @@
+.book {
+    background: #F3F3F3;;
+	&__intro {
+        height: 600px;
+        padding: 200px 0px 0px;
+        position: relative;
+        background: url('../img/book-intro/shutter-island-intro.webp') 0% 80px/100% 600px no-repeat;
+        background-attachment: fixed;
+        padding: 0px 0px 8px;
+    }
+
+	&__name {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: 0px 0px 0px 381px;
+        height: 100%;
+        & h2{
+            color: $white;
+            font-family: $manrope;
+            font-size: 50px;
+            font-weight: 700;
+            margin: 0px 0px 10px 0px;
+        }
+	}
+
+	&__author {
+        display: flex;
+        justify-content: space-between;
+
+        & h3{
+            color: $white;
+            font-family: $manrope;
+            font-weight: 300;
+            font-size: 24px;
+        }
+        & p{
+            color: $white;
+            font-family: $manrope;
+            font-weight: 700;
+            font-size: 29px;
+        }
+
+	}
+
+	&__row {
+        display: flex;
+        position: relative;
+        z-index: 2;
+	}
+
+	&__aside {
+        flex: 0 0 349px;
+        position: relative;
+        margin-top: -160px;
+        &__img{
+            position: relative;
+            width: 100%;
+            height: 500px;
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 0px 0px 16px 0px;
+
+            & img{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+        }
+
+        &__buttons{
+            display: flex;
+            justify-content: space-between;
+            margin: 0px 0px 16px 0px;
+
+            & a{
+                text-align: center;
+                width: 167px;
+                height: 54px;
+                padding: 16px 0px;   
+            }
+        }
+
+        &__button {
+            display: block;
+            text-align: center;
+            width: 100%;
+            height: 54px;
+            padding: 16px 0px; 
+            margin: 0px 0px 16px 0px; 
+        }
+
+        &__text{
+            color: $primary;
+            font-size: 16px;
+            line-height: 24px;
+            display: flex;
+        
+            & h4{
+                font-family: $manrope;
+                font-weight: 700;
+                margin: 0px 16px 0px 0px;
+            }
+        
+            & p{
+                font-family: $helvetica;
+                font-weight: 400;
+            }
+        }
+	}
+
+	&__inner {
+        flex: 1 1 auto;
+        padding: 16px 0px 32px 32px;
+        max-width: 1043px;
+	}
+
+	&__top {
+        display: flex;
+        margin: 0px 0px 16px 0px;
+        & p{
+            font-family: $manrope;
+            font-size: 16px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #F9452D 0%, #E81970 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            margin: 0px 32px 0px 0px;
+
+            &:last-child{
+                margin: 0px;
+            }
+        }
+	}
+
+	&__description {
+        margin: 0px 0px 32px 0px;
+        & p{
+            font-family: $helvetica;
+            font-weight: 400;
+            font-size: 16px;
+            color: #1B1717;
+            line-height: 24px;
+            margin: 0px 0px 16px 0px;
+        }
+        & ul{
+            display: flex;
+            & li{
+                font-family: $manrope;
+                font-size: 16px;
+                font-weight: 400;
+                background: linear-gradient(90deg, #F9452D 0%, #E81970 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                margin: 0px 32px 0px 0px;
+    
+                &:last-child{
+                    margin: 0px;
+                }
+            }
+        }
+	}
+
+	&__adaptation {
+        margin: 0px 0px 32px 0px;
+
+        &__row{
+            display: flex;
+        }
+
+        &__img{
+            position: relative;
+            flex: 0 0 190px;
+            height: 270px;
+
+            & img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+        }
+
+        &__inner{
+            flex: 1 1 auto;
+            padding: 0px 16px;
+            max-width: 1043px;
+
+            & h3{
+                font-family: $manrope;
+                font-weight: 700;
+                font-size: 22px;
+                background: linear-gradient(90deg, #F9452D 0%, #E81970 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                margin: 0px 0px 16px 0px;
+            }
+            & p{
+                margin: 0px 0px 8px 0px;
+                &:last-child{
+                    margin: 0;
+                }
+            }
+        }
+	}
+}
+

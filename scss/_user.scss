@@ -1,0 +1,215 @@
+.user {
+    padding: 80px 0px 0px 0px;
+		&__intro {
+            height: 400px;
+            background: url('../img/user/user__bg.svg');
+		}
+
+		&__row {
+            display: flex;
+            padding: 8px 0px 0px;
+            margin: 0px 0px 32px 0px;
+		}
+
+		&__img {
+            position: relative;
+            flex: 0 0 200px;
+            height: 200px;
+            padding-right: 16px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-top: -88px;
+            & img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+		}
+
+		&__info {
+            flex: 1 1 auto;
+            padding-left: 16px;
+		}
+
+		&__title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0px 0px 16px 0px;
+            & h3{
+                font-family: $manrope;
+                font-weight: 700;
+                font-size: 29px;
+                color: #1B1717;
+            }
+		}
+
+		&__soc {
+            display: flex;
+            align-items: center;
+            & a{
+                display: flex;
+                align-items: center;
+            }
+            & span{
+                font-weight: 400;
+                font-size: 20px;
+                color: #575353;
+                margin-right: 8px;
+            }
+
+            & p{
+                display: inline;
+                font-family: $helvetica;
+                font-weight: 400;
+                font-size: 16px;
+                color: #575353;                
+                margin-right: 8px;
+            }
+
+            &:last-child{
+                margin: 0px;
+            }
+		}
+
+		&__age {
+            font-family: $helvetica;
+            font-weight: 400;
+            font-size: 12px;
+            color: #575353;
+            margin: 0px 0px 8px 0px;
+		}
+
+		&__status {
+            font-family: $helvetica;
+            font-weight: 400;
+            font-size: 16px;
+            color: #575353;
+            max-width: 540px;
+            line-height: 24px;
+		}
+}
+
+
+.tabs { // norm
+
+    &__user {
+        position: relative;
+    }
+
+    &__row {
+    }
+
+    &__nav {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        gap: 32px;
+        margin: 0px 0px 56px 0px;
+        padding-left: 20px;
+    }
+
+    &__nav-btn {
+        position: relative;
+        font-family: $manrope;
+        font-weight: 700;
+        font-size: 22px;
+        color: #1B1717;
+        cursor: pointer;
+
+        &.active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #1B1717;
+            bottom: -10px;
+            left: 0;
+        }
+    }
+
+    &__content {
+    }
+
+    &__item {
+        display: none;
+        &.active{
+            display: flex;
+        }
+    }
+
+}
+
+.item{
+
+    &__aside{
+        flex: 0 0 303px;
+        margin-right: 24px;
+
+        &__row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 9px 20px;
+            transition: all 100ms ease;
+
+            &.aside__active{
+                background: #fff;
+                border-radius: 8px;
+            }
+
+            &:hover{
+                background: #fff;
+                border-radius: 8px;
+            }
+        }
+        &__link{
+            font-family: $manrope;
+            font-weight: 700;
+            font-size: 16px;
+            color: #575353;
+            cursor: pointer;
+
+            &.aside__active{
+                background: linear-gradient(90deg, #F9452D 0%, #E81970 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+        
+    }
+
+    &__inner{
+        display: none;
+        flex: 1 1 auto;
+        padding-left: 24px;
+        position: relative;
+
+        &.aside__active{
+            display: block;
+        }
+
+        & input{
+            width: 100%;
+            height: 42px;
+            border: 1px solid #8F8D8D;
+            border-radius: 8px;
+            padding: 8px 16px;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__row{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(320px, 1fr));
+        gap: 25px;
+    }
+}
+
+
+
+

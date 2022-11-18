@@ -1,0 +1,221 @@
+@import "_variable.scss";
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #F9452D 0%, #E81970 100%);
+        z-index: 2;
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        height: 80px;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        transition: ease 100ms;
+        position: relative;
+        z-index: 3;
+        max-width: 87px;
+        & a {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 12px;
+            color: $white;
+        }
+    } 
+
+    &__burger {
+        display: none;
+        &.burger-active::before{
+            transform: rotate(45deg);
+            top: 9px;
+        }
+        &.burger-active::after{
+            transform: rotate(-45deg);
+            bottom: 9px;
+        }
+        &.burger-active span{
+            display: none;
+        }
+    }
+
+    &__search{
+        width: 457px;
+        height: 32px;
+        position: relative;
+        text-align: center;
+        color: #fff;
+        z-index: 2;
+        & input{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            padding: 8px 16px;
+        }
+        &-small{
+            display: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        position: relative;
+        z-index: 2;
+        height: 38px;
+        font-weight: 700;
+        & li{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__link{
+        font-size: 1.15rem;
+        color: $white;
+        margin: 0px 32px 0px 0px;
+        transition: ease 200ms;
+        border: none;
+        background: none;
+
+        &:hover{
+            color: #1B1717;
+        }
+
+        &-white{
+            height: 100%;
+            color: $primary;
+            background: $white;
+            font-size: 1.15rem;
+            width: 147px;
+            padding: 8px 20px 8px;
+            border-radius: 8px;
+            transition: all 200ms ease;
+            border: 2px solid #fff;
+
+            &:hover{
+                background: #E9E9E8;
+            }
+        }       
+    }
+    &__setting{
+        display: flex;
+        justify-content: space-between;
+        width: 72px;
+        z-index: 2;
+    }
+    &__light{
+        width: 24px;
+        height: 24px;
+        position: relative;
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+// Для страницы чтения
+.header__read{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    padding: 0px 32px;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $primary;
+        z-index: 2;
+    }
+
+    &-author{
+        transition: ease 100ms;
+        position: relative;
+        z-index: 3;
+        & a:first-child {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 22px;
+            color: $white;
+        }
+        & a:last-child{
+            display: block;
+            font-family: $helvetica;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: #8F8D8D;
+        }
+    }
+
+    &-name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $manrope;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: $white;
+        z-index: 3;
+    }
+
+    &-menu{
+        display: flex;
+        align-items: center;
+    }
+
+    
+    &-link{
+        font-size: 24px;
+        color: #fff;
+        margin: 0px 32px 0px 0px;
+        transition: ease 200ms;
+        border: none;
+        background: none;
+    }
+
+}
+
+.header__hidden{
+    font-size: 24px;
+    color: #fff;
+}
+
+.header__burger {
+    display: none;
+    &.burger-active::before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    &.burger-active::after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    &.burger-active span{
+        display: none;
+    }
+}

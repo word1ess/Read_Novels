@@ -1,0 +1,417 @@
+@media only screen and (max-width: 1900px){
+
+}
+
+@media only screen and (max-width: 1700px) {
+
+}
+
+@media only screen and (max-width: 1440px) {
+    .book{
+        &__intro{
+            background: url("../img/book-intro/shutter-island-intro.webp") 100% 80px/100% 100% no-repeat;
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .book{
+
+        &__intro{
+            height: 400px;
+        }
+
+        &__description{
+            & ul{
+                flex-wrap: wrap;
+                row-gap: 16px;
+            }
+        }
+
+        &__aside__text{
+            & h4{
+                min-width: 84.66px;
+                max-width: 84.66px;
+            }
+        }
+    }
+    .about{
+        &__item:last-child{
+            flex-wrap: wrap-reverse;
+        }
+
+        &__item{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__text{
+            margin-bottom: 120px ;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+    .intro{
+        height: auto;
+        padding: 200px 0px 32px;
+    }
+
+    .header{
+        &__burger{
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            z-index: 3;
+        }
+        &__burger span{
+            position: absolute;
+            background-color: #fff;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            top: 9px;
+        }
+        &__burger::before,
+        &__burger::after{
+            content: '';
+            position: absolute;
+            background-color: #fff;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            transition: all 300ms ease-out 0ms;
+        }
+        &__burger::before{
+            top: 0;
+        }
+        &__burger::after{
+            bottom: 0;
+        }
+        &__menu{
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            padding: 150px 30px 30px;
+            transition: all 400ms ease-in 0ms;
+            font-size: 18px;
+            &.burger-active{
+                top: 0;
+            }
+        }
+        &__list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        &__link{
+            margin: 0;
+        }
+        &__list li {
+            position: relative;
+            margin: 0px 0px 40px 0px;
+            width: 100%;
+            text-align: center;
+        }
+        &__search-big{
+            display: none;
+        }
+        &__search-small{
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 40px;
+            & input{
+                padding: 8px 16px;
+            }
+        }
+        &__soc{
+            z-index: 0;
+            width: auto;
+            position: auto;
+            margin: 0 0 60px 0;
+            &-small{
+                display: block;
+            }
+        }
+    }
+
+    .work{
+        padding: 48px 0px;
+        &__row{
+            flex-wrap: wrap;
+        }
+        &__item{
+            flex: 1 1 auto ;
+            text-align: center;
+            margin-bottom: 32px ;
+            align-items: center;
+        }
+        &__item__text{
+            max-width: 330px;
+        }
+    }
+
+    .adaptive{
+        height: auto;
+
+        &__btn{
+            margin-bottom: 32px;
+        }
+
+        &__images{
+            display: flex;
+            justify-content: center;
+            height: auto;
+        }
+
+        &__img{
+            position: relative;
+        }
+
+        &__img-first, &__img-third{
+            display: none;
+         }
+
+        &__img-second{
+            display: block;
+            left: 0;
+            margin: 0 auto;
+        }
+    }
+
+    .collections__row{
+        margin-bottom: 32px;
+    }
+
+    .book{
+
+        &__name{
+            margin: 0;
+        }
+
+        &__row{
+            display: block;
+            padding: 16px 0px 0px;
+        }
+
+        &__aside{
+            margin: 0 auto;
+            max-width: 500px;
+        }
+
+        &__aside__describe{
+            margin-bottom: 16px;
+        }
+
+        &__aside__text{
+            & h4{
+                min-width: 120px;
+                max-width: 120px;
+            }
+        }
+
+        &__inner{
+            padding: 0px;
+        }
+
+        &__adaptation__row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__adaptation__img{
+            width: 190px;
+            max-width: 190px;
+            min-height: 270px;
+            max-height: 270px;
+        }
+
+        &__adaptation__inner{
+            & h3{
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .adaptive{
+
+        .adaptive__img{
+            position: relative;
+            width: 500px;
+            height: 300px;
+
+            & img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    .selections{
+
+        &__row{
+            grid-template-columns: repeat(auto-fill, minmax(324px, 1fr));
+        }
+
+        &__first-img{
+            display: none;
+        }
+        &__second-img{
+            display: none;
+        }
+    }
+    .book{
+        &__intro{
+            height: 300px;
+        }
+    }
+    .footer{
+        &__row{
+            flex-direction: column;
+            gap: 32px;
+        }
+        &__thanks{
+            align-items: flex-start;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .intro{
+        padding: 95px 0px 15px;
+        background: linear-gradient(90deg, #F3F3F3 39%, rgba(255, 255, 255, 0.782417) 79%, rgba(0, 0, 0, 0) 100%), 
+        url("../img/main/intro.webp") 0% 40%/180% 135% no-repeat;
+        background-attachment: fixed;
+
+        &__title{
+            font-size: 42px;
+
+            & span{
+                font-size: 42px !important; 
+            }
+        }
+
+        &__subtitle{
+            font-size: 26px;
+            line-height: 30px;
+        }
+
+        &__text{
+            font-size: 14px;
+
+        }
+    }
+
+    .catalog{
+
+        &__row{
+            display: block;
+        }
+
+        &__aside{
+            display: none;
+        }
+
+        &__aside__small{
+            display: block;
+            margin-bottom: 32px;
+        }
+
+        &__items{
+            padding: 0px;
+        }
+    }
+
+    .aside__btn{
+        width: 100%;
+    }
+
+    .about{
+
+        &__row{
+            padding: 48px 0px 0px;
+        }
+
+        &__text{
+            margin-bottom: 56px;
+        }
+
+        &__btn{
+            flex-wrap: wrap;
+            justify-content: center !important;
+        }
+    }
+
+    .work{
+
+        &__subtitle{
+            line-height: 32px;
+        }
+    }
+}
+
+@media only screen and (max-width: 378px) {
+    .intro{
+
+        &__title{
+            line-height: 48px;
+        }
+    }
+
+    .about{
+
+        &__images{
+            height: 300px;
+        }
+
+        &__img{
+            width: 160px;
+            height: 220px;
+        }
+
+        &__img-first{
+            top: 30px;
+            left: 70px;
+        }
+
+        &__img-second{
+            left: 120px;
+        }
+
+        &__img-third{
+            right: 80px;
+        }
+
+        &__text{
+            margin-right: 0px !important;
+        }
+    }
+
+    .work{
+
+        &__title{
+            line-height: 40px;
+        }
+
+        &__row{
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__item__title{
+            font-size: 30px;
+        }
+    }
+
+}

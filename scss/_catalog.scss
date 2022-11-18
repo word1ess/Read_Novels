@@ -1,0 +1,204 @@
+.catalog {
+    padding: 152px 15px 0;
+    background: $white;
+
+    &__row {
+        display: flex;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(235px, 235px));
+        justify-content: center;
+        gap: 32px;
+        margin: 0px 0px 32px 0px;
+        background: $white;
+        flex: 1 1 auto;
+        padding: 0px 32px 0px 0px;
+    }
+
+    &__img{
+        width: 241px;
+        height: 341px;
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        & img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            border-radius: 16px;
+        }
+    }
+
+    &__card__hover{
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: all 800ms ease;
+    
+        &:hover{
+            opacity: 1;
+        }
+    
+        & a{
+            display: block;
+            position: absolute;
+            width: 146px;
+            height: 30px;
+            bottom: 16px;
+            padding: 8px 0px;
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+
+    &__card__text{
+        color: $white;
+        font-size: 14px;
+        line-height: 20px;
+        display: flex;
+    
+        & h4{
+            font-family: $manrope;
+            font-weight: 700;
+            margin: 0px 16px 0px 0px;
+        }
+    
+        & p{
+            font-family: $helvetica;
+            font-weight: 400;
+        }
+    }
+
+    &__aside {
+        flex: 0 0 280px;
+        background: #fff;
+        padding: 32px 16px;
+        font-family: $manrope;
+        font-size: 16px;
+        min-height: 1720px;
+        max-height: 1720px;
+        border-radius: 8px;
+    }
+
+    &__aside__small{
+        display: none;
+        background: #fff;
+        padding: 32px 16px;
+        font-family: $manrope;
+        font-size: 16px;
+        min-height: 1720px;
+        max-height: 1720px;
+        border-radius: 8px;
+    }
+}
+
+.aside {
+    &__btn {
+        text-align: center;
+        color: #575353;
+        width: 292px;
+        padding: 8px 0px;
+        background: #E9E9E8;
+        border-radius: 8px;
+        margin: 0px 0px 48px 0px;
+    }
+    &__search-input {
+        margin: 0px 0px 32px 0px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 16px;
+        color: $primary;
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__period{
+        margin: 0px 0px 32px 0px;
+    }
+
+    &__label{
+        display: block;
+        color: #575353;
+        position: relative;
+        margin: 0px 0px 14px 0px;
+
+        & p{
+            margin-left: 32px;
+        }
+    }
+
+    &__date {
+        margin: 0px 0px 32px 0px;
+    }
+
+    &__type {
+        margin: 0px 0px 32px 0px;
+    }
+
+    &__checkbox {
+        position: absolute;
+        -webkit-appearance: none;
+        appearance: none;
+        // &::before{
+        //     content: '';
+        //     display: block;
+        //     position: absolute;
+        //     border: 1px solid #575353;
+        //     border-radius: 8px;
+        //     width: 24px;
+        //     height: 24px;
+        //     top: -3px;
+        //     left: 0;
+        //     z-index: 1;
+        // }
+        // &::after{
+        //     content: '';
+        //     display: block;
+        //     position: absolute;
+        //     opacity: 0;
+        //     width: 24px;
+        //     height: 24px;
+        //     top: -3px;
+        //     left: 0;
+        //     z-index: 2;
+        //     border-radius: 8px;
+        //     background: url('../img/icons/check.svg') no-repeat;
+        //     background-size: 24px 24px;
+        // }
+    }
+
+    &__check{
+        display: block;
+        position: absolute;
+        border: 1px solid #575353;
+        border-radius: 8px;
+        width: 24px;
+        height: 24px;
+        top: -5px;
+        left: 0;
+        z-index: 1;
+        padding: 4px;
+    }
+
+    &__checkbox:checked + &__check{
+        background: url('../img/icons/check.svg') no-repeat, $gradient;
+        background-size: 24px 24px;
+        border: none;
+    }
+
+    &__list {
+        margin: 0px 0px 32px 0px;
+    }
+
+    &__age {
+        margin: 0px 0px 32px 0px;
+    }
+}

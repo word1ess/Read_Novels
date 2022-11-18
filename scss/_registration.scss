@@ -1,0 +1,144 @@
+.registration {
+    width: 100%;
+    min-height: 100%;
+    padding: 208px 0px 0px;
+    background: #F3F3F3;
+    &__row {
+        position: relative;
+        margin: 0 auto;
+        padding: 16px;
+        width: 480px;
+        background: #fff;
+        border-radius: 8px;
+    }
+
+    &__title {
+        font-family: $manrope;
+        font-weight: 700;
+        font-size: 29px;
+        color: #1B1717;
+        margin: 0px 0px 16px 0px;
+    }
+
+    &__subtitle {
+        font-family: $helvetica;
+        font-weight: 400;
+        font-size: 16px;
+        color: #575353;
+        margin: 0px 0px 16px 0px;
+    }
+
+    &__button {
+        width: 100%;
+        height: 40px;
+        padding: 9px 0px;
+        text-align: center;
+
+        margin: 0px 0px 16px 0px;
+    }
+
+    &__acc{
+        display: flex;
+
+        & p{
+            font-family: $helvetica;
+            font-weight: 400;
+            font-size: 16px;
+            color: #575353;
+            margin: 0px 8px 0px 0px;
+        }
+    }
+    &__password{
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 0px 16px 0px;
+    }
+}
+
+.social {
+
+    &__title {
+        font-family: $manrope;
+        font-weight: 700;
+        font-size: 16px;
+        color: #1B1717;
+        margin: 0px 0px 8px 0px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 52px;
+        margin: 0px 0px 16px 0px;
+    }
+
+    &__item {
+        width: 56px;
+        height: 56px;
+        background: #E9E9E8;
+        border-radius: 8px;
+        color: #575353;
+        font-size: 29px;
+        text-align: center;
+        padding: 12px 0px;
+    }
+
+    &__or {
+        position: relative;
+        font-family: $helvetica;
+        font-weight: 400;
+        font-size: 16px;
+        color: #8F8D8D;
+        text-align: center;
+        margin: 0px 0px 36px 0px;
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 45%;
+            height: 1px;
+            top: 50%;
+            left: 0px;
+            background-color: #8F8D8D;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 45%;
+            height: 1px;
+            top: 50%;
+            right: 0px;
+            background-color: #8F8D8D;
+        }
+    }
+}
+
+.enter__title{
+    font-family: $manrope;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1B1717;
+    margin: 0px 0px 8px 0px;
+}
+
+.enter__input{
+    margin: 0px 0px 16px 0px;
+}
+
+.after{
+    position: relative;
+    height: 2px;
+    width: 100%;
+    margin: 0px 0px 60px 0px;
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        top: 50%;
+        right: 0px;
+        background-color: #8F8D8D;
+    }
+}

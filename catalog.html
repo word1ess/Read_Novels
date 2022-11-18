@@ -1,0 +1,1555 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Каталог</title>
+	<!-- Адаптив -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<link rel="apple-touch-icon" sizes="180x180" href="../Read_Novels/img/icons/logo-big.svg">
+	<link rel="icon" type="image/svg" sizes="16x16" href="../Read_Novels/img/icons/logo-small.svg">
+	<link rel="icon" type="image/svg" sizes="32x32" href="../Read_Novels/img/icons/logo-small.svg">
+	<link rel="manifest" href="../Read_Novels/img/icons/logo-small.svg">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__body">
+					<div class="header__logo">
+						<div class="header__img">
+							<img src="../Read_Novels/img/icons/logo-small.svg" alt="main_icon">
+						</div>
+						<a href="../Read_Novels/index.html">Read<br />Novels</a>
+					</div>
+					<div class="header__search header__search-big">
+						<input type="search" placeholder="Начните вводить автора или название книги">
+					</div>
+					<div class="header__burger">
+						<span>
+
+						</span>
+					</div>
+					<nav class="header__menu">
+						<div class="header__search header__search-small">
+							<input type="search" placeholder="Начните вводить автора или название книги">
+						</div>
+						<ul class="header__list">
+							<li>
+								<a href="../Read_Novels/catalog.html" class="header__link">Каталог</a>
+							</li>
+							<li>
+								<a href="../Read_Novels/collections.html" class="header__link">Подборки</a>
+							</li>
+							<li>
+								<a href="../Read_Novels/about.html" class="header__link">О проекте</a>
+							</li>
+							<li>
+								<a href="../Read_Novels/random.html" class="header__link-white">Мне повезет</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__setting">
+						<a href="#" class="header__light">
+							<img src="../Read_Novels/img/icons/theme.svg" alt="theme">
+						</a>
+						<a href="../Read_Novels/regisration.html" class="header__light">
+							<img src="../Read_Novels/img/icons/lk.svg" alt="lk">
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="content">
+			<div class="catalog">
+				<div class="container">
+					<div class="title">
+						<h3>Каталог</h3>
+						<p>Всего 14157</p>
+					</div>
+					<div class="catalog__row">
+						<div class="catalog__aside__small">
+							<form action="#">
+								<input type="reset" class="aside__btn">
+								<div class="aside__search">
+									<div class="aside__search-input">
+										<h3 class="aside__title">Поиск по названию</h3>
+										<input class="input" type="text" placeholder="Название">
+									</div>
+									<div class="aside__search-input">
+										<h3 class="aside__title">Поиск по автору</h3>
+										<input class="input" type="text" placeholder="Имя автора">
+									</div>
+								</div>
+								<div class="aside__period">
+									<h3 class="aside__title">Период публикации</h3>
+									<input class="text-indent" type="range" oninput="textIndent()" step="1" min="0" max="30" value="30">
+								</div>
+								<div class="aside__date">
+									<h3 class="aside__title">Год издания</h3>
+									<input class="aside__input" type="text" placeholder="Год">
+								</div>
+								<div class="aside__type">
+									<h3 class="aside__title">Тип</h3>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Авторский</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Роман</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Сборник</p>
+									</label>
+								</div>
+								<div class="aside__list">
+									<h3 class="aside__title">Мой список</h3>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>В планах</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Читаю</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Прочитано</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Любимое</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Брошено</p>
+									</label>
+								</div>
+								<div class="aside__age">
+									<h3 class="aside__title">Возрастное ограничение</h3>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>0+</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>6+</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>12+</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>16+</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>18+</p>
+									</label>
+								</div>
+								<div class="aside__genres">
+									<h3 class="aside__title">Жанры</h3>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Экшн</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Ужасы</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Детектив</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Триллер</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Психологическое</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Драма</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Постапокалипсис</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Антиутопия</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Сверхъестественное</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Романтика</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Комедия</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Эротика</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Военное</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Пародия</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>История</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Русская классика</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Зарубежная классика</p>
+									</label>
+								</div>
+							</form>
+						</div>
+						<div class="catalog__items">
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/tokyo-zodiac.webp" alt="tokyo-zodiac">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Токийский зодиак</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Содзи Симада</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Детектив,</p>
+									</a>
+									<a href="../genres/post-apocalypse.html" class="books__text">
+										<p class="books__text">&nbsp;триллер</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/door-to-summer.webp" alt="door-to-summer">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Дверь в лето</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Роберт Хайлайн</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Драма,</p>
+									</a>
+									<a href="../genres/post-apocalypse.html" class="books__text">
+										<p class="books__text">&nbsp;приключения</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/big-wave.webp" alt="big-wave">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Великая волна, прокатившаяся по всему миру</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Лантации Джузеппе</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Приключения</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/martian-time-shift.webp" alt="martian-time-shift">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Сдиг времени по-марсиански</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Филип К.Дик</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Фантастика,</p>
+									</a>
+									<a href="../genres/post-apocalypse.html" class="books__text">
+										<p class="books__text">&nbsp;приключения</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/1984.webp" alt="1984">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">1984</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Джордж Оруэлл</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Антиутопия</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/crime-and-punishment.webp" alt="/crime-and-punishment">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/metro-2035.html">
+									<h3 class="books__title">Преступление и наказание </h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Федор Достоевский</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Триллер,</p>
+									</a>
+									<a href="../genres/post-apocalypse.html" class="books__text">
+										<p class="books__text">&nbsp;психология</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/metro-2033-universe.webp" alt="metro-2033-universe">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Вселенная Метро 2033</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Дмитрий Глуховский</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Постапокалипсис</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/metro-2033.webp" alt="metro-2033">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Метро 2033</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Дмитрий Глуховский</p>
+									</a>
+									<a href="../genres/post-apocalypse.html" class="books__text">
+										<p class="books__text">Постапокалипсис</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/metro-2034.webp" alt="metro-2034">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Метро 2034</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Дмитрий Глуховский</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Постапокалипсис</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/metro-2035.webp" alt="metro-2035">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Метро 2035</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Дмитрий Глуховский</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Постапокалипсис</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/misery.webp" alt="misery">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/metro-2035.html">
+									<h3 class="books__title">Мизери</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Стивен Кинг</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Триллер</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/it.webp" alt="it">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/metro-2035.html">
+									<h3 class="books__title">Оно</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Стивен Кинг</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Ужасы</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/tokyo-zodiac.webp" alt="tokyo-zodiac">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Токийский зодиак</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Содзи Симада</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Детектив,</p>
+									</a>
+									<a href="../genres/post-apocalypse.html" class="books__text">
+										<p class="books__text">&nbsp;триллер</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/door-to-summer.webp" alt="door-to-summer">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Дверь в лето</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Роберт Хайлайн</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Драма,</p>
+									</a>
+									<a href="../genres/post-apocalypse.html" class="books__text">
+										<p class="books__text">&nbsp;приключения</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/big-wave.webp" alt="big-wave">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Великая волна, прокатившаяся по всему миру</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Лантации Джузеппе</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Приключения</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/martian-time-shift.webp" alt="martian-time-shift">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Сдиг времени по-марсиански</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Филип К.Дик</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Фантастика,</p>
+									</a>
+									<a href="../genres/post-apocalypse.html" class="books__text">
+										<p class="books__text">&nbsp;приключения</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/1984.webp" alt="1984">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">1984</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Джордж Оруэлл</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Антиутопия</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/crime-and-punishment.webp" alt="/crime-and-punishment">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/metro-2035.html">
+									<h3 class="books__title">Преступление и наказание </h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Федор Достоевский</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Триллер,</p>
+									</a>
+									<a href="../genres/post-apocalypse.html" class="books__text">
+										<p class="books__text">&nbsp;психология</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/metro-2033-universe.webp" alt="metro-2033-universe">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Вселенная Метро 2033</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Дмитрий Глуховский</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Постапокалипсис</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/metro-2033.webp" alt="metro-2033">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Метро 2033</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Дмитрий Глуховский</p>
+									</a>
+									<a href="../genres/post-apocalypse.html" class="books__text">
+										<p class="books__text">Постапокалипсис</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/metro-2034.webp" alt="metro-2034">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Метро 2034</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Дмитрий Глуховский</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Постапокалипсис</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/metro-2035.webp" alt="metro-2035">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/shutter-island.html">
+									<h3 class="books__title">Метро 2035</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Дмитрий Глуховский</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Постапокалипсис</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/misery.webp" alt="misery">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/metro-2035.html">
+									<h3 class="books__title">Мизери</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Стивен Кинг</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Триллер</p>
+									</a>
+								</div>
+							</div>
+							<div class="books__item">
+								<div class="catalog__img">
+									<img src="../Read_Novels/img/books/it.webp" alt="it">
+									<div class="catalog__card__hover">
+										<div class="card__bg">
+											<div class="catalog__card__text">
+												<h4>Год издания:</h4>
+												<p>2021</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Страна:</h4>
+												<p>США</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Возрастной рейтинг:</h4>
+												<p>16+</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Прочтений:</h4>
+												<p>41676</p>
+											</div>
+											<div class="catalog__card__text">
+												<h4>Количество страниц:</h4>
+												<p>270</p>
+											</div>
+											<a href="../Read_Novels/books/shutter-island.html" class="button button-white">
+												<p>Читвть</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="../books/metro-2035.html">
+									<h3 class="books__title">Оно</h3>
+								</a>
+								<div class="books__name">
+									<a href="#">
+										<p class="books__text books__text-left">Стивен Кинг</p>
+									</a>
+									<a href="../genres/fiction.html" class="books__text">
+										<p class="books__text">Ужасы</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<asside class="catalog__aside">
+							<form action="#">
+								<input type="reset" class="aside__btn">
+								<div class="aside__search">
+									<div class="aside__search-input">
+										<h3 class="aside__title">Поиск по названию</h3>
+										<input class="input" type="text" placeholder="Название">
+									</div>
+									<div class="aside__search-input">
+										<h3 class="aside__title">Поиск по автору</h3>
+										<input class="input" type="text" placeholder="Имя автора">
+									</div>
+								</div>
+								<div class="aside__period">
+									<h3 class="aside__title">Период публикации</h3>
+									<input class="text-indent" type="range" oninput="textIndent()" step="1" min="0" max="30" value="30">
+								</div>
+								<div class="aside__date">
+									<h3 class="aside__title">Год издания</h3>
+									<input class="aside__input" type="text" placeholder="Год">
+								</div>
+								<div class="aside__type">
+									<h3 class="aside__title">Тип</h3>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Авторский</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Роман</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Сборник</p>
+									</label>
+								</div>
+								<div class="aside__list">
+									<h3 class="aside__title">Мой список</h3>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>В планах</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Читаю</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Прочитано</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Любимое</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Брошено</p>
+									</label>
+								</div>
+								<div class="aside__age">
+									<h3 class="aside__title">Возрастное ограничение</h3>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>0+</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>6+</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>12+</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>16+</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>18+</p>
+									</label>
+								</div>
+								<div class="aside__genres">
+									<h3 class="aside__title">Жанры</h3>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Экшн</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Ужасы</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Детектив</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Триллер</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Психологическое</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Драма</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Постапокалипсис</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Антиутопия</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Сверхъестественное</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Романтика</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Комедия</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Эротика</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Военное</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Пародия</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>История</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Русская классика</p>
+									</label>
+									<label class="aside__label">
+										<input type="checkbox" class="aside__checkbox">
+										<span class="aside__check"></span>
+										<p>Зарубежная классика</p>
+									</label>
+								</div>
+							</form>
+						</asside>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__row">
+					<div class="footer__nav">
+						<h3 class="footer__title">Быстрый переход</h3>
+						<ul class="footer__list">
+							<li>
+								<a href="../Read_Novels/catalog.html" class="footer__link  text">Каталог</a>
+							</li>
+							<li>
+								<a href="../Read_Novels/collections.html" class="footer__link text">Подборки</a>
+							</li>
+							<li>
+								<a href="../Read_Novels/about.html" class="footer__link text">О проекте</a>
+							</li>
+						</ul>
+						<div class="footer__mail">
+							<p class="text">В случае нарушения авторских прав обращайтесь на почту:</p>
+							<a href="#">onlinereader@gmail.com</a>
+						</div>
+						<div class="footer__soc">
+							<a href="#" class="fa-brands fa-telegram"></a>
+							<a href="#" class="fa-brands fa-vk"></a>
+							<a href="#" class="fa-brands fa-discord"></a>
+						</div>
+					</div>
+					<div class="footer__thanks">
+						<h3 class="footer__title">Благодарим за выбор нашего сервиса!</h3>
+						<div class="footer__logo">
+							<img src="../Read_Novels/img/icons/logo-big.svg" alt="logo-big">
+							<p>Read<br />Novels</p>
+						</div>
+						<div class="footer__reseved text">2018-2022 “ReadNovels” All rights reserved</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://kit.fontawesome.com/cdd40c5823.js" crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

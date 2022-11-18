@@ -1,0 +1,289 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Остров проклятых - 1 страница</title>
+	<!-- Адаптив -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="../css/style.css" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<link rel="apple-touch-icon" sizes="180x180" href="../Read_Novels/img/icons/logo-big.svg">
+	<link rel="icon" type="image/svg" sizes="16x16" href="../Read_Novels/img/icons/logo-small.svg">
+	<link rel="icon" type="image/svg" sizes="32x32" href="../Read_Novels/img/icons/logo-small.svg">
+	<link rel="manifest" href="../Read_Novels/img/icons/logo-small.svg">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<header class="header__read">
+			<div class="header__body">
+				<div class="header__read-author">
+					<a href="../books/shutter-island.html">Остров проклятых</a>
+					<a href="../Read_Novels/index.html">Дэннис Лихэйн</a>
+				</div>
+				<div class="header__read-name">
+						<p>Пролог</p>
+				</div>
+				<div class="header__burger">
+					<span>
+
+					</span>
+				</div>
+				<nav class="header__menu">
+					<ul class="header__list">
+						<li>
+							<a href="../catalog.html" class="header__read-link">
+								<i class="fa-solid fa-magnifying-glass">
+								</i>
+							</a>
+							<p class="read-page-header__hidden">Вернуться в каталог</p>
+						</li>
+						<li>
+							<label class="header__list-label">
+								<p class="header__read-link fa-solid fa-bookmark"></p>
+								<p class="read-page-header__hidden">Добавить в закладки</p>
+							</label>
+						</li>
+						<li>
+							<label class="header__list-label">
+								<p class="header__read-link header-list fa-solid fa-list"></p>
+								<p class="read-page-header__hidden">Оглавление</p>
+							</label>
+							<div class="header__read-hover header-list-hover">
+								<h3 class="header__hover-title">Оглавление</h3>
+								<p class="header__hover-text">Пролог</p>
+								<p class="header__hover-text">Глава 1 - День первый: Рейчел</p>
+								<ul>
+									<li class="header__hover-list">1</li>
+									<li class="header__hover-list">2</li>
+									<li class="header__hover-list">3</li>
+									<li class="header__hover-list">4</li>
+									<li class="header__hover-list">5</li>
+									<li class="header__hover-list">6</li>
+								</ul>
+								<p class="header__hover-text">Глава 2 - День второй: Лэддис</p>
+								<ul>
+									<li class="header__hover-list">7</li>
+									<li class="header__hover-list">8</li>
+									<li class="header__hover-list">9</li>
+									<li class="header__hover-list">10</li>
+									<li class="header__hover-list">11</li>
+									<li class="header__hover-list">12</li>
+									<li class="header__hover-list">13</li>
+								</ul>
+								<p class="header__hover-text">Глава 3 - День третий: Пациент 57</p>
+								<ul>
+									<li class="header__hover-list">14</li>
+									<li class="header__hover-list">15</li>
+									<li class="header__hover-list">16</li>
+									<li class="header__hover-list">17</li>
+									<li class="header__hover-list">18</li>
+									<li class="header__hover-list">19</li>
+								</ul>
+								<p class="header__hover-text">Глава 4 - День четвертый: Плохой моряк</p>
+								<ul>
+									<li class="header__hover-list">20</li>
+									<li class="header__hover-list">21</li>
+									<li class="header__hover-list">22</li>
+									<li class="header__hover-list">23</li>
+									<li class="header__hover-list">24</li>
+									<li class="header__hover-list">25</li>
+								</ul>
+						</div>
+						</li>
+						<li>
+							<label class="header__list-label">
+								<p class="header__read-link header-settings fa-solid fa-gear"></p>
+								<p class="read-page-header__hidden">Настройки страницы</p>
+							</label>
+							<div class="header__read-hover header-settings-hover">
+								<h3 class="header__hover-title">Настройки</h3>
+								<p class="header__hover-text">Цветовая тема</p>
+								<div class="header__color-row">
+									<button id="btn__white" class="color__item color__item__white">Aa</button>
+									<button id="btn__linen" class="color__item color__item__linen">Aa</button>
+									<button id="btn__maize" class="color__item color__item__maize">Aa</button>
+									<button id="btn__grey" class="color__item color__item__grey">Aa</button>
+									<button id="btn__black" class="color__item color__item__black">Aa</button>
+								</div>
+								<div>
+									<p class="header__hover-text">Размер шрифта</p>
+									<div class="insert-font">16px</div>
+									<input id="seek" class="font-size" type="range" name="seekbar" oninput="fontSize()" step="1" min="12" max="30" value="18">
+								</div>
+								<div>
+									<p class="header__hover-text">Межстрочный интервал</p>
+									<div class="insert-height">24px</div>
+									<input id="line-height" class="line-height" type="range" oninput="lineHeight()" step="1" min="12" max="30" value="24">
+								</div>
+								<div>
+									<p class="header__hover-text">Отступ абзацев</p>
+									<div class="insert-indent">29px</div>
+									<input id="text-indent" class="text-indent" type="range" oninput="textIndent()" step="1" min="0" max="30" value="30">
+								</div>
+								<div>
+									<p class="header__hover-text">Отступ между абзацами</p>
+									<div class="insert-margin">24px</div>
+									<input id="margin-bottom" class="margin-bottom" oninput="marginBottom()" type="range" step="1" min="0" max="30" value="24">
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="content">
+			<div class="read__page">
+				<div class="container">
+					<p class="read__page-text">
+						Из дневников доктора Лестера Шина 
+					</p>
+					<p class="read__page-text">
+						3 мая 1993 года 
+					</p>
+					<p class="read__page-text">
+						Я не видел остров несколько лет. Последний раз – с яхты моего приятеля, вышедшей из бухты в залив. 
+						Остров был виден вдали, за внутренней грядой, в саване из летней дымки, случайный мазок краски на фоне неба.
+					</p>
+					<p class="read__page-text">
+						Больше двух десятилетий на него не ступала моя нога, но Эмили говорит (иногда шутя, иногда нет), 
+						что ей сдается, будто я оттуда и не уезжал. Как-то она сказала, что для меня время – это серия закладок, 
+						с помощью которых я гуляю вперед-назад по тексту моей жизни, снова и снова возвращаясь к событиям, 
+						которые, с точки зрения моих проницательных коллег, показывают меня классическим меланхоликом. 
+					</p>
+					<p class="read__page-text">
+						Возможно, Эмили права. Она так часто бывает права.
+					</p>
+					<p class="read__page-text">
+						Скоро я и ее потеряю. Вопрос нескольких месяцев, как сказал нам в четверг доктор Аксельрод. 
+						Совершите это путешествие, посоветовал он. То, о котором вы постоянно говорите. Флоренция, Рим,
+						Венеция весной. Вы, Лестер, тоже в неважной форме, добавил он. 
+					</p>
+					<p class="read__page-text">
+						Пожалуй. В последнее время я стал частенько класть вещи не на свое место, особенно очки. 
+						И ключи от машины. Я вхожу в магазин и не помню, зачем пришел. Выхожу из театра и тут же забываю, 
+						о чем был спектакль. Если время для меня и вправду серия закладок, то ощущение такое, будто кто-то 
+						сначала так тряхнул мою книжку, что из нее посыпались пожелтевшие полоски бумаги, оторванные спичечные 
+						этикетки и пластиковые палочки для размешивания кофе, а потом распрямил загнутые уголки. 					
+					</p>
+					<p class="read__page-text">
+						Поэтому я хочу все записать. Не отредактировать текст, чтобы выставить себя в более выгодном свете. 
+						Нет, нет. Он бы этого не позволил. Ведь он по-своему ненавидел ложь, как никто другой. 
+						Просто хочется сохранить текст, перенести его из нынешнего хранилища (в котором, откровенно говоря, 
+						стало влажно и начались протечки) на эти страницы. Больница «Эшклиф» располагалась на центральной равнине 
+						в северо-западной части острова. И вид, добавлю, имела самый благопристойный. Меньше всего она была похожа 
+						на больницу для невменяемых преступников и тем паче на военные казармы, каковыми являлись изначально ее корпуса. 
+						Если на то пошло, она нам напоминала школу-интернат. В викторианской мансарде по соседству с главным зданием жил 
+						смотритель, а в красивом замке эпохи Тюдоров, где когда-то квартировал командующий северо-восточным прибрежным отрядом 
+						армии северян, проживал наш кадровик. За стеной располагались жилые дома сотрудников – причудливые коттеджи из дранки 
+						для клинических врачей, три приземистых общежития из шлакоблоков для санитаров, надзирателей и медсестер. 
+						Основную территорию больницы украшали лужайки и подстриженные живые изгороди, огромные тенистые дубы, шотландские сосны, 
+						аккуратные клены и яблони, плоды с которых поздней осенью бомбардировали крепостные стены и рассыпались по траве. 
+						А по бокам больницы, величественного здания из добротного гранита и темно-серых плит, стояли краснокирпичные близнецы в 
+						колониальном стиле. Дальше просматривались отвесные скалы и образованные приливами болота и полоса долины, где некогда возникла 
+						общественная ферма, захиревшая вскоре после американской революции. Посаженные еще тогда деревья – персиковые, грушевые, 
+						арония – выжили, но давно не плодоносили, и ночные ветра, налетавшие на долину, порой завывали, как бродячие коты. 
+					</p>
+					<p class="read__page-text">
+						Ну и конечно форт стоял здесь задолго до появления больничного персонала и по-прежнему стоит, возвышаясь над южным мысом. 
+						И чуть поодаль маяк, потухший еще до Гражданской войны и ставший анахронизмом из-за действующего бостонского собрата. 
+					</p>
+					<p class="read__page-text">
+						Со стороны моря вроде бы ничего особенного. Но посмотрите глазами Тедди Дэниелса, увидевшего все это тихим сентябрьским утром 1954 года. 
+						Поросший кустарником пятачок посреди бухты. Не столько даже остров, сколько идея острова. Какое у него может быть предназначение, вероятно, подумал он.
+					</p>
+					<p class="read__page-text">
+						Вот именно, какое. 
+					</p>
+					<p class="read__page-text">
+						Самой большой популяцией у нас были крысы. Они шебуршали в кустах, по ночам выстраивались боевыми порядками вдоль берега, 
+						взбирались на мокрые скалы. Некоторые размером с камбалу. После тех четырех странных дней летом пятьдесят четвертого я не 
+						один год изучал поведение крыс из ложбины в холме с видом на северное побережье. К своему удивлению, я обнаружил, что отдельные 
+						крысы пытались доплыть до острова Паддок, в сущности, скалы в песочнице, двадцать два часа из двадцати четырех остававшейся под водой. 
+						Всякий раз, когда во время отлива островок появлялся над водой на час-полтора, они предпринимали заплыв, эти крысы, десяток, не больше, 
+						и всегда новый прилив заставлял их вернуться восвояси. 
+					</p>
+					<p class="read__page-text">
+						Я сказал «всегда», но это не так. Я видел, как одна доплыла-таки. Всего один раз. В полнолуние перед осенним равноденствием, 
+						в октябре пятьдесят шестого. Я явственно разглядел черную тушку водяного щитомордника, прошмыгнувшего по отмели.
+					</p>
+					<p class="read__page-text">
+						Или так мне показалось. Эмили, с которой я познакомился на острове, сказала мне: «Лестер, ты не мог ее разглядеть с такого расстояния». 
+					</p>
+					<p class="read__page-text">
+						Она права. 
+					</p>
+					<p class="read__page-text">
+						И тем не менее я видел своими глазами. Толстый щитомордник шмыгнул по жемчужно-серому песку, уходящему снова под воду с возвращением 
+						прилива, готового проглотить остров Паддок вместе с этой крысой, ибо назад она уже не приплыла. 
+					</p>
+					<p class="read__page-text">
+						И в ту минуту, когда она бежала по отмели (и все-таки я ее видел, видел, разрази меня гром), я подумал о Тедди. 
+						О Тедди и его несчастной покойной жене Долорес Шаналь и их клонах, Рейчел Соландо и Эндрю Лэддисе, 
+						этой жуткой парочке, устроившей у нас форменный погром. Если бы Тедди тогда сидел рядом со мной, подумал я, 
+						он бы тоже увидел эту крысу. Наверняка. 
+					</p>
+					<p class="read__page-text">
+						Скажу вам больше. 
+					</p>
+					<p class="read__page-text">
+						Тедди… 
+					</p>
+					<p class="read__page-text">
+						Он бы ей поаплодировал.
+					</p>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__row">
+					<div class="footer__nav">
+						<h3 class="footer__title">Быстрый переход</h3>
+						<ul class="footer__list">
+							<li>
+								<a href="../EKB-Coffee/catalog.html" class="footer__link  text">Каталог</a>
+							</li>
+							<li>
+								<a href="../EKB-Coffee/collections.html" class="footer__link text">Подборки</a>
+							</li>
+							<li>
+								<a href="../EKB-Coffee/about.html" class="footer__link text">О проекте</a>
+							</li>
+						</ul>
+						<div class="footer__mail">
+							<p class="text">В случае нарушения авторских прав обращайтесь на почту:</p>
+							<a href="#">onlinereader@gmail.com</a>
+						</div>
+						<div class="footer__soc">
+							<a href="#" class="fa-brands fa-telegram"></a>
+							<a href="#" class="fa-brands fa-vk"></a>
+							<a href="#" class="fa-brands fa-discord"></a>
+						</div>
+					</div>
+					<div class="footer__thanks">
+						<h3 class="footer__title">Благодарим за выбор нашего сервиса!</h3>
+						<div class="footer__logo">
+							<img src="../Read_Novels/img/icons/logo-big.svg" alt="logo-big">
+							<p>Read<br />Novels</p>
+						</div>
+						<div class="footer__reseved text">2018-2022 “ReadNovels” All rights reserved</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://kit.fontawesome.com/cdd40c5823.js" crossorigin="anonymous"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+
+</html>

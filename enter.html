@@ -1,0 +1,175 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Вход</title>
+	<!-- Адаптив -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<link rel="apple-touch-icon" sizes="180x180" href="../Read_Novels/img/icons/logo-big.svg">
+	<link rel="icon" type="image/svg" sizes="16x16" href="../Read_Novels/img/icons/logo-small.svg">
+	<link rel="icon" type="image/svg" sizes="32x32" href="../Read_Novels/img/icons/logo-small.svg">
+	<link rel="manifest" href="../Read_Novels/img/icons/logo-small.svg">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__body">
+					<div class="header__logo">
+						<div class="header__img">
+							<img src="../Read_Novels/img/icons/logo-small.svg" alt="main_icon">
+						</div>
+						<a href="../Read_Novels/index.html">Read<br />Novels</a>
+					</div>
+					<div class="header__search header__search-big">
+						<input type="search" placeholder="Начните вводить автора или название книги">
+					</div>
+					<div class="header__burger">
+						<span>
+
+						</span>
+					</div>
+					<nav class="header__menu">
+						<div class="header__search header__search-small">
+							<input type="search" placeholder="Начните вводить автора или название книги">
+						</div>
+						<ul class="header__list">
+							<li>
+								<a href="../Read_Novels/catalog.html" class="header__link">Каталог</a>
+							</li>
+							<li>
+								<a href="../Read_Novels/collections.html" class="header__link">Подборки</a>
+							</li>
+							<li>
+								<a href="../Read_Novels/about.html" class="header__link">О проекте</a>
+							</li>
+							<li>
+								<a href="../Read_Novels/random.html" class="header__link-white">Мне повезет</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__setting">
+						<a href="#" class="header__light">
+							<img src="../Read_Novels/img/icons/theme.svg" alt="theme">
+						</a>
+						<a href="../Read_Novels/regisration.html" class="header__light">
+							<img src="../Read_Novels/img/icons/lk.svg" alt="lk">
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="content">
+			<div class="registration">
+                <div class="container">
+                    <div class="registration__row">
+                        <h3 class="registration__title">Вход</h3>
+                        <p class="registration__subtitle">Войдите в свою учетную запись, используя имя пользователя или адрес электронной почты и пароль, указанные при регистрации</p>
+                        <div class="registration__social">
+                            <h4 class="social__title">Вход с помощью</h4>
+                            <div class="social__row">
+                                <a href="#">
+                                    <div class="social__item"><i class="fa-brands fa-vk"></i></div>
+                                </a>
+                                <a href="#">
+                                    <div class="social__item"><i class="fa-brands fa-telegram"></i></div>
+                                </a>
+                                <a href="#">
+                                    <div class="social__item"><i class="fa-brands fa-google"></i></div>
+                                </a>
+                                <a href="#">
+                                    <div class="social__item"><i class="fa-brands fa-twitter"></i></div>
+                                </a>
+                                <a href="#">
+                                    <div class="social__item"><i class="fa-brands fa-facebook"></i></div>
+                                </a>
+                            </div>
+                            <p class="social__or">или</p>
+                        </div>
+                        <div class="registration__enter">
+                            <form action="#">
+                                <label>
+                                    <h4 class="enter__title">Логин</h4>
+                                    <input type="text" placeholder="example" class="enter__input input">
+                                </label>
+                                <label>
+                                    <h4 class="enter__title">Пароль</h4>
+                                    <input type="password" placeholder="example" class="enter__input input">
+                                </label>
+                                <div class="registration__password">
+                                    <label class="aside__label">
+                                        <input type="checkbox" class="aside__checkbox">
+                                        <span class="aside__check"></span>
+                                        <p>Запомнить меня</p>
+                                    </label>
+                                    <a href="#" class="gradient">Забыли пароль?</a>
+                                </div>
+                            </form>
+                            <div class="after"></div>
+                        </div>
+                        <button class="registration__button button">
+                            <p>Войти</p>
+                        </button>
+                        <div class="registration__acc">
+                            <p>Нет аккаунта?</p>
+                            <a href="../Read_Novels/regisration.html" class="gradient">Зарегистрируйтесь</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__row">
+					<div class="footer__nav">
+						<h3 class="footer__title">Быстрый переход</h3>
+						<ul class="footer__list">
+							<li>
+								<a href="../Read_Novels/catalog.html" class="footer__link  text">Каталог</a>
+							</li>
+							<li>
+								<a href="../Read_Novels/collections.html" class="footer__link text">Подборки</a>
+							</li>
+							<li>
+								<a href="../Read_Novels/about.html" class="footer__link text">О проекте</a>
+							</li>
+						</ul>
+						<div class="footer__mail">
+							<p class="text">В случае нарушения авторских прав обращайтесь на почту:</p>
+							<a href="#">onlinereader@gmail.com</a>
+						</div>
+						<div class="footer__soc">
+							<a href="#" class="fa-brands fa-telegram"></a>
+							<a href="#" class="fa-brands fa-vk"></a>
+							<a href="#" class="fa-brands fa-discord"></a>
+						</div>
+					</div>
+					<div class="footer__thanks">
+						<h3 class="footer__title">Благодарим за выбор нашего сервиса!</h3>
+						<div class="footer__logo">
+							<img src="../Read_Novels/img/icons/logo-big.svg" alt="logo-big">
+							<p>Read<br />Novels</p>
+						</div>
+						<div class="footer__reseved text">2018-2022 “ReadNovels” All rights reserved</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://kit.fontawesome.com/cdd40c5823.js" crossorigin="anonymous"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
